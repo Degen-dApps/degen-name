@@ -39,7 +39,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="container">
-            <h3>Domains</h3>
+            <h3>Names</h3>
 
             <table class="table table-hover mt-4 mb-4">
               <tbody>
@@ -51,7 +51,7 @@
 
             <p v-if="getUserSelectedNameData">
               <small><em>
-                Don't see your domain here? 
+                Don't see your .degen name here? 
                 <span class="span-link" data-bs-toggle="modal" data-bs-target="#addDomainModal">
                   Add it manually</span>.
               </em></small>

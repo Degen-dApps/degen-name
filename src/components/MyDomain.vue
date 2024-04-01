@@ -7,7 +7,7 @@
       class="text-click" 
       @click="this.$router.push({name: 'DomainDetails', params: {domainChain: getChainId, tld: domain.split('.')[1], domainName: domain.split('.')[0]}})"
     >
-      Edit domain data
+      Edit name data
     </span>
   </td>
   <td>
@@ -15,7 +15,7 @@
       class="text-click" 
       @click="this.$router.push({name: 'TransferDomain', params: {tld: domain.split('.')[1], domainName: domain.split('.')[0]}})"
     >
-      Transfer domain
+      Transfer name
     </span>
   </td>
   <td>
@@ -37,12 +37,12 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" :id="'defaultNameModalLabel'+getDomainName">Set {{domain}} as default domain</h5>
+          <h5 class="modal-title" :id="'defaultNameModalLabel'+getDomainName">Set {{domain}} as default name</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <p>
-            Do you really want to set <strong>{{domain}}</strong> as your default domain name?
+            Do you really want to set <strong>{{domain}}</strong> as your default .degen name?
           </p>
 
           <p>
