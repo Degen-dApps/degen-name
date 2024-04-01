@@ -15,6 +15,13 @@
 
           <div class="navbar-menu-buttons">
 
+            <!-- NFTdegen.lol -->
+            <a 
+              class="btn btn-primary ms-2 navbar-menu-btn" 
+              href="https://nftdegen.lol" 
+              target="_blank"
+            >NFTdegen.lol</a>
+
             <!-- Block Explorer -->
             <a 
               class="btn btn-primary ms-2 navbar-menu-btn" 
