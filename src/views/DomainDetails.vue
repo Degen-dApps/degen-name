@@ -23,7 +23,7 @@
 
               <div class="col-sm-9 punk-text text-break">
                 {{holderData}}
-                <a :href="getBlockExplorerBaseUrl+'/address/'+holderData" target="_blank">
+                <a :href="getBlockExplorerBaseUrl+'/address/'+holderData" target="_blank" class="text-decoration-none">
                   <i class="bi bi-box-arrow-up-right"></i>
                 </a>
               </div>
@@ -36,6 +36,22 @@
 
               <div class="col-sm-9 punk-text text-break">
                 {{getChainName(Number(domainChain))}}
+              </div>
+            </div>
+
+            <div class="mb-3 row domain-data mt-4">
+              <div class="col-sm-3 punk-title">
+                Other names
+              </div>
+
+              <div class="col-sm-9 punk-text text-break">
+                <a 
+                  class="text-decoration-none"
+                  :href="'https://explorer.degen.tips/token/0x4087fb91A1fBdef05761C02714335D232a2Bf3a1?tab=inventory&holder_address_hash='+holderData" 
+                  target="_blank"
+                >
+                  Other .degen names by this user <i class="bi bi-box-arrow-up-right"></i>
+                </a>
               </div>
             </div>
 
