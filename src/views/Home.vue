@@ -5,11 +5,9 @@
 
     <div class="text-align-header mt-5 mb-2">
       <h1>Mint your {{getTldName}} web3 name!</h1>
-      <p>
+      <p class="mt-4">
         And use it as username on  
-        <a href="https://nftdegen.lol" target="_blank">
-          NFTdegen.lol, an NFT launchpad and marketplace on Degen Chain!
-        </a>.
+        <a href="https://nftdegen.lol" target="_blank">NFTdegen.lol</a> and other dApps on Degen Chain!
       </p>
     </div>
 
