@@ -12,6 +12,10 @@
 
     <a target="_blank" href="https://punk.domains">Powered by Punk Domains</a> |
     <a target="_blank" href="https://degen.tips">Built for Degens</a>
+
+    <span v-if="!isActivated"> | 
+      <span class="cursor-pointer" @click="clearStorage">Clear storage</span>
+    </span>
   </div>
 
   <div class="container-fluid text-center">
@@ -36,6 +40,19 @@ export default {
     ...mapGetters("network", ["isNetworkSupported"]),
     ...mapGetters("user", ["isUserMinterAdmin", "isUserTldAdmin", "isUserRoyaltyFeeUpdater"]),
     
+  },
+
+  methods: {
+    clearStorage() {
+      localStorage.clear();
+      sessionStorage.clear();
+      // clear cookies
+      document.cookie.split(";").forEach((c) => {
+        document.cookie = c
+          .replace(/^ +/, "")
+          .replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+      });
+    },
   },
 
   setup() {

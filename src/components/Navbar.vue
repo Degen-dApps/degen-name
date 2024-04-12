@@ -22,13 +22,6 @@
               target="_blank"
             >NFTdegen.lol</a>
 
-            <!-- Block Explorer -->
-            <a 
-              class="btn btn-primary ms-2 navbar-menu-btn" 
-              href="https://explorer.degen.tips/token/0x4087fb91A1fBdef05761C02714335D232a2Bf3a1" 
-              target="_blank"
-            >Explorer</a>
-
             <div v-if="isActivated" class="btn-group ms-2 navbar-menu-btn">
               <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 {{getNetworkName}}
@@ -51,6 +44,7 @@
               </button>
               <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="dropdownMenuButton2">
                 <router-link tag="li" class="dropdown-item" to="/profile">Profile</router-link>
+                <li v-if="isActivated" class="dropdown-item" @click="openUrl('https://explorer.degen.tips/token/0x4087fb91A1fBdef05761C02714335D232a2Bf3a1?tab=inventory&holder_address_hash='+address)">All your .degen names</li>
                 <router-link tag="li" class="dropdown-item" to="/">Buy domain</router-link>
                 <router-link tag="li" class="dropdown-item" to="/search-domain">Search domain</router-link>
                 <router-link tag="li" class="dropdown-item" to="/send-tokens">Send tokens</router-link>
@@ -62,6 +56,13 @@
             </div>
 
             <button v-if="!isActivated" class="btn btn-primary navbar-menu-btn ms-2" data-bs-toggle="modal" data-bs-target="#connectModal">Connect wallet</button>
+
+            <!-- Block Explorer -->
+            <a 
+              class="btn btn-primary ms-2 navbar-menu-btn" 
+              href="https://explorer.degen.tips/token/0x4087fb91A1fBdef05761C02714335D232a2Bf3a1" 
+              target="_blank"
+            >Explorer</a>
 
             <!--
             <div v-if="isActivated" class="btn-group ms-2 navbar-menu-btn">
@@ -124,11 +125,11 @@ export default {
   setup() {
     const { open } = useBoard();
     const { disconnect } = useWallet();
-    const { isActivated } = useEthers();
+    const { address, isActivated } = useEthers();
     const { switchOrAddChain } = useChainHelpers();
 
     return {
-      isActivated, disconnect, open, switchOrAddChain
+      address, isActivated, disconnect, open, switchOrAddChain
     }
   }
 }

@@ -56,7 +56,18 @@
                   Add it manually</span>.
               </em></small>
             </p>
-            <p v-else>
+
+            <p v-if="getUserSelectedNameData">
+              <small>
+                Find all your .degen names here 
+                <a 
+                  target="_blank" 
+                  :href="'https://explorer.degen.tips/token/0x4087fb91A1fBdef05761C02714335D232a2Bf3a1?tab=inventory&holder_address_hash='+address"
+                >on the block explorer</a>.
+              </small>
+            </p>
+
+            <p  v-if="!getUserSelectedNameData">
               No domain? No worries, <router-link to="/">buy yourself one here!</router-link>
             </p>
           </div>
