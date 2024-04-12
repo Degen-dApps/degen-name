@@ -236,6 +236,12 @@ export default {
 
     return { getChainName, getFallbackProvider, isActivated, signer, toast }
   },
+
+  watch: {
+    domainName() {
+      this.fetchData();
+    }
+  }
 }
 </script>
 
