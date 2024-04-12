@@ -18,9 +18,9 @@
 
     <a class="icons" href="http://docs.punk.domains" target="_blank"><i class="bi bi-journal-text"></i></a>
 
-    <a class="icons" target="_blank" href="https://github.com/Degen-Dapps"><i class="bi bi-github"></i></a>
+    <a class="icons" target="_blank" href="https://github.com/Degen-dApps/degen-name"><i class="bi bi-github"></i></a>
 
-    <a class="icons" target="_blank" href="https://warpcast.com/~/channel/degen"><i class="bi bi-chat"></i></a>
+    <a class="icons" target="_blank" href="https://warpcast.com/~/channel/degen-name"><i class="bi bi-chat"></i></a>
     
   </div>
 </template>
