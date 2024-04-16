@@ -45,7 +45,8 @@
       </h3>
 
       <p>
-        Any dApp or web3 frontend can easily integrate with <code>.degen</code> domain extensions.
+        Any dApp or web3 frontend can easily integrate with <code>.degen</code> domain extensions. 
+        [Here is a quick tutorial on how to do the integration](https://gist.github.com/tempe-techie/2e14a9371aa40a286a8442e03ae7c8cf).
       </p>
 
       <p>

@@ -50,7 +50,7 @@
                 <router-link tag="li" class="dropdown-item" to="/send-tokens">Send tokens</router-link>
                 <router-link tag="li" class="dropdown-item" to="/about">About</router-link>
                 <!-- <router-link tag="li" class="dropdown-item" to="/browser">Browser extension</router-link> -->
-                <li class="dropdown-item" @click="openUrl('https://docs.punk.domains/')">Docs</li>
+                <li class="dropdown-item" @click="openUrl('https://gist.github.com/tempe-techie/2e14a9371aa40a286a8442e03ae7c8cf')">Integrate .degen names</li>
                 <li class="dropdown-item" @click="logout">Disconnect</li>
               </ul>
             </div>
