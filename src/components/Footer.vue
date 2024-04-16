@@ -10,12 +10,12 @@
     <router-link v-if="isUserMinterAdmin || isUserRoyaltyFeeUpdater || isUserTldAdmin" to="/admin">Admin</router-link>
     <span v-if="isUserMinterAdmin || isUserRoyaltyFeeUpdater || isUserTldAdmin"> | </span>
 
-    <a target="_blank" href="https://punk.domains">Powered by Punk Domains</a> |
-    <a target="_blank" href="https://degen.tips">Built for Degens</a>
-
-    <span v-if="!isActivated"> | 
-      <span class="cursor-pointer" @click="clearStorage">Clear storage</span>
+    <span v-if="!isActivated">
+      <span class="cursor-pointer" @click="clearStorage">Clear storage</span> | 
     </span>
+
+    <a target="_blank" href="https://degen.tips">Built for Degens</a> |
+    <a target="_blank" href="https://gist.github.com/tempe-techie/2e14a9371aa40a286a8442e03ae7c8cf">Integrate .degen names</a>
   </div>
 
   <div class="container-fluid text-center">
