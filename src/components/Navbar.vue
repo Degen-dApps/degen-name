@@ -57,6 +57,12 @@
 
             <button v-if="!isActivated" class="btn btn-primary navbar-menu-btn ms-2" data-bs-toggle="modal" data-bs-target="#connectModal">Connect wallet</button>
 
+            <!-- Temp: Nonce number -->
+            <span 
+              class="btn btn-primary ms-2 navbar-menu-btn" 
+              v-if="isActivated && nonce"
+            >{{ nonce }}</span>
+
             <!-- Block Explorer -->
             <a 
               class="btn btn-primary ms-2 navbar-menu-btn" 
@@ -92,6 +98,12 @@ import useChainHelpers from "../hooks/useChainHelpers";
 export default {
   name: "Navbar",
 
+  data() {
+    return {
+      nonce: null
+    }
+  },
+
   computed: {
     ...mapGetters("user", ["getUserShortAddress", "getUserSelectedName"]),
     ...mapGetters("network", ["getNetworkName", "getSupportedNetworks", "getSupportedNetworkNames"]),
@@ -111,6 +123,12 @@ export default {
       this.switchOrAddChain(window.ethereum, networkName);
     },
 
+    async fetchNonce() {
+      console.log(this.signer.provider);
+      this.nonce = await this.signer.provider.getTransactionCount(this.address);
+      console.log("Nonce: ", this.nonce);
+    },
+
     logout() {
       this.disconnect();
       localStorage.clear();
@@ -125,11 +143,17 @@ export default {
   setup() {
     const { open } = useBoard();
     const { disconnect } = useWallet();
-    const { address, isActivated } = useEthers();
+    const { address, isActivated, signer } = useEthers();
     const { switchOrAddChain } = useChainHelpers();
 
     return {
-      address, isActivated, disconnect, open, switchOrAddChain
+      address, isActivated, disconnect, open, signer, switchOrAddChain
+    }
+  },
+
+  watch: {
+    address() {
+      this.fetchNonce();
     }
   }
 }
