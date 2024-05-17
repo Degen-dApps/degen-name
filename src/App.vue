@@ -20,11 +20,15 @@
             </div>
 
             <div class="card col-6 cursor-pointer wallet-img-wrapper" @click="connectMetaMask">
-              <img src="./assets/wallets/bifrost.png" class="card-img-top card-img-wallet" alt="Bifrost">
+              <img src="./assets/wallets/rainbow.png" class="card-img-top card-img-wallet" alt="Rainbow">
             </div> 
 
             <div class="card col-6 cursor-pointer wallet-img-wrapper" @click="connectMetaMask">
               <img src="./assets/wallets/rabby.png" class="card-img-top card-img-wallet" alt="Rabby">
+            </div> 
+
+            <div class="card col-6 cursor-pointer wallet-img-wrapper" @click="connectMetaMask">
+              <img src="./assets/wallets/bifrost.png" class="card-img-top card-img-wallet" alt="Bifrost">
             </div> 
 
             <div class="card col-6 cursor-pointer wallet-img-wrapper" @click="connectMetaMask">
