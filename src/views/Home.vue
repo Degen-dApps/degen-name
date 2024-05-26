@@ -124,6 +124,8 @@
     
   </div>
 
+  <Integrations />
+
   <Referral v-if="isActivated" />
 
 </template>
@@ -135,6 +137,7 @@ import { mapActions, mapGetters, mapMutations } from 'vuex';
 import { useToast, TYPE } from "vue-toastification";
 import WaitingToast from "../components/toasts/WaitingToast.vue";
 import Referral from '../components/Referral.vue';
+import Integrations from '../components/Integrations.vue';
 import useDomainHelpers from "../hooks/useDomainHelpers";
 import useChainHelpers from "../hooks/useChainHelpers";
 import MinterAbi from "../abi/Minter.json";
@@ -154,6 +157,7 @@ export default {
   },
 
   components: {
+    Integrations,
     Referral
   },
 
