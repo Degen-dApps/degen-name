@@ -93,6 +93,18 @@
               </div>
             </div>
           </div>
+          
+          <div class="col cursor-pointer" @click="openUrl('https://farcaster.vote/app#/profile')">
+            <div class="card h-100 border-0">
+              <img src="../assets/integrations/farcaster-vote.png" class="card-img-top" alt="Farcaster.vote">
+              <div class="card-body">
+                <h5 class="card-title">Farcaster.vote</h5>
+                <p class="card-text">
+                  Voting service for Degen Chain communities on Farcaster
+                </p>
+              </div>
+            </div>
+          </div>
 
         </div>
 
