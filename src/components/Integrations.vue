@@ -34,7 +34,7 @@
             </div>
           </div>
           
-          <div class="col cursor-pointer" @click="openUrl('https://degen.poidh.xyz/')">
+          <div class="col cursor-pointer" @click="openUrl('https://poidh.xyz/degen')">
             <div class="card h-100 border-0">
               <img src="../assets/integrations/poidh.png" class="card-img-top" alt="POIDH">
               <div class="card-body">
