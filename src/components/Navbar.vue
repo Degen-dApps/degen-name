@@ -57,12 +57,6 @@
 
             <button v-if="!isActivated" class="btn btn-primary navbar-menu-btn ms-2" data-bs-toggle="modal" data-bs-target="#connectModal">Connect wallet</button>
 
-            <!-- Temp: Nonce number -->
-            <span 
-              class="btn btn-primary ms-2 navbar-menu-btn" 
-              v-if="isActivated && nonce"
-            >{{ nonce }}</span>
-
             <!-- Block Explorer -->
             <a 
               class="btn btn-primary ms-2 navbar-menu-btn" 

@@ -58,6 +58,18 @@
             </div>
           </div>
           
+          <div class="col cursor-pointer" @click="openUrl('https://degenradio.lol')">
+            <div class="card h-100 border-0">
+              <img src="../assets/integrations/degen-radio.png" class="card-img-top" alt="Degen Radio">
+              <div class="card-body">
+                <h5 class="card-title">DegenRadio.lol</h5>
+                <p class="card-text">
+                  Stream music NFTs and create playlists on Degen Chain
+                </p>
+              </div>
+            </div>
+          </div>
+          
           <div class="col cursor-pointer" @click="openUrl('https://send2.name/')">
             <div class="card h-100 border-0">
               <img src="../assets/integrations/send2name.png" class="card-img-top" alt="Send2.name">
@@ -77,18 +89,6 @@
                 <h5 class="card-title">The Portal</h5>
                 <p class="card-text">
                   Interactive game-like experience for Degen Chain
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col cursor-pointer" @click="openUrl('https://exchange.frogswap.xyz/#/swap')">
-            <div class="card h-100 border-0">
-              <img src="../assets/integrations/frogswap.png" class="card-img-top" alt="FrogSwap">
-              <div class="card-body">
-                <h5 class="card-title">FrogSwap</h5>
-                <p class="card-text">
-                  Decentralized exchange and farm on Degen Chain
                 </p>
               </div>
             </div>
