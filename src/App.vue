@@ -170,7 +170,7 @@ export default {
 
     const coinbaseConnector = new CoinbaseWalletConnector({
 			appName: "DegenName.lol",
-			jsonRpcUrl: "https://rpc.degen.tips",
+			jsonRpcUrl: "https://degen-mainnet.g.alchemy.com/v2/Vn3jRzC23Ej4LYpz_TVNs20T9r-LigaO",
 		});
 
 		const mmConnector = new MetaMaskConnector({

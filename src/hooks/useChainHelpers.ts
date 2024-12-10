@@ -14,7 +14,7 @@ export default function useChainHelpers() {
 
   function getFallbackProvider(networkId) {
     let chain = chains.find(chain => chain.chainId == networkId);
-    let urls = [chain.rpc2];
+    let urls = [chain.rpc1];
 
     if (urls) {
       const providers = urls.map(url => new ethers.providers.JsonRpcProvider(url));
@@ -79,7 +79,7 @@ const chains = [
     chainId: 666666666, 
     name: "Degen", 
     currency: "DEGEN", 
-    rpc1: "https://rpc.degen.tips", 
+    rpc1: "https://degen-mainnet.g.alchemy.com/v2/Vn3jRzC23Ej4LYpz_TVNs20T9r-LigaO", 
     rpc2: "https://rpc.degen.tips", 
     blockExplorer: "https://explorer.degen.tips"
   }
